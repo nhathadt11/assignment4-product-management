@@ -75,6 +75,7 @@ namespace ConsoleClientApp
                         }
                         break;
                     default:
+                        Environment.Exit(Environment.ExitCode);
                         break;
                 }
             }
@@ -82,14 +83,14 @@ namespace ConsoleClientApp
         static int Menu()
         {
             int choice;
-            Console.WriteLine("1.	List all Products.");
-            Console.WriteLine("2.	List all Suppliers.");
-            Console.WriteLine("3.	List all Categories.");
-            Console.WriteLine("4.	Search Products by Product name.");
-            Console.WriteLine("5.	Search Suppliers by Company Name.");
+            Console.WriteLine("1.   List all Products.");
+            Console.WriteLine("2.   List all Suppliers.");
+            Console.WriteLine("3.   List all Categories.");
+            Console.WriteLine("4.   Search Products by Product name.");
+            Console.WriteLine("5.   Search Suppliers by Company Name.");
             Console.WriteLine("6.   Quit.");
-            Console.Write("Your choice: ");
-            while (!int.TryParse(Console.ReadLine(), out choice)) { break; }
+            do { Console.Write("Your choice: "); }
+            while (!int.TryParse(Console.ReadLine(), out choice) || choice < 1 || choice > 6);
             return choice;
         }
     }
