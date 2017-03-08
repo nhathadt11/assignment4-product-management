@@ -1,11 +1,7 @@
 ﻿using ASM4_ProductManagement;
-using ASM4_ProductManagement.Repository;
 using ASM4_ProductManagement.Service;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ConsoleClientApp
 {
